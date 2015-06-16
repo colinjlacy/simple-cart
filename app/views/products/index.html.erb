@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Listing Products</h1>
 
@@ -13,8 +12,8 @@
   <% end %>
 </ul>
 <% end %>
-
 <br>
 <% if current_user %>
-	<%= link_to 'New Product', new_product_path %>
+	<%= link_to 'New Product', new_product_path %> |
 <% end %>
+<a href="/cart">Your Cart</a>

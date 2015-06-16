@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'cart/' => 'cart#show', as: "show"
+  post 'cart/add/:id' => 'cart#add', as: "cart_add"
+  delete 'cart/remove/:id' => 'cart#remove', as: "cart_remove"
+  delete 'cart/clear' => 'cart#clear', as: "cart_clear"
+
   devise_for :users
 	root 'products#index'
 	resources :products
